@@ -1,0 +1,20 @@
+[package]
+name = "madara_nft_contract"
+version = "0.0.1"
+
+# See more keys and their definitions at https://docs.swmansion.com/scarb/docs/reference/manifest.html
+
+[dependencies]
+starknet = "2.1.0"
+
+[[target.starknet-contract]]
+# Enable Sierra codegen.
+sierra = true
+allowed-libfuncs-list.name = "experimental"
+
+# Enable CASM codegen.
+casm = true
+
+[tool.sncast]
+account = "test_user"
+url = "https://starknet-goerli.g.alchemy.com/v2/xH1ISEJgS906iZsj-7x6kyUjziXr6hTY"
