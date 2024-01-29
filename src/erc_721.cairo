@@ -94,7 +94,8 @@ mod MadaraNFT {
     }
 
     fn constructor (ref self: ContractState){
-        self.initializer('Web3mqNFT', 'Web3mqNFT');
+        self.ERC721_name.write('MadaraNFT');
+        self.ERC721_symbol.write('MNFT');
     }
 
     //
