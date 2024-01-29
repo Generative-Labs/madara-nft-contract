@@ -104,6 +104,7 @@ mod MadaraNFT {
     impl MadaraNFTImpl of super::IMadaraNFT<ContractState>{
         fn mint_with_url(ref self: ContractState, token_id: u256, token_uri: felt252){
             self._mint(get_caller_address(), token_id);
+            self.ERC721_token_uri.write(token_id, token_uri);
         }
     }
 
